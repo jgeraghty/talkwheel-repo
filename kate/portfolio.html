@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+		<link rel="stylesheet" media="all" type="text/css" href="css/main.css"/>
+		<link rel="Shortcut Icon" href="images/favicon.ico" type="image/x-icon"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		
+<script type="text/javascript" src="js/jquery.js"></script>		
+<script type="text/javascript" src="js/cycle.js"></script>
+		<meta name="robots" content="index, follow"/>
+		<meta name="author" content="Joe Geraghty"/>
+        <title>My Site</title>
+		
+<script type="text/javascript">
+  // When the document loads do everything inside here ...
+     $(document).ready(function(){
+		 var numImg=0
+		 loadImages(numImg);
+		 //numImg= numImg+8;
+		 var viewControlHtml2 = [];
+		 
+		 viewControlHtml2.push('<img alt="test" class="larrow" src="images/larrow.gif" />');
+		 viewControlHtml2.push('<img alt="test" class="arrow" src="images/arrow.gif" />');	 
+  	 jQuery('#clear').html(viewControlHtml2.join(''));
+		 
+		 if(numImg==0){
+		 	$(".larrow").addClass("hide");
+		 }	
+		 $("img.arrow").click(function() { //start function when any link is clicked
+				numImg= numImg+8;		
+		 		loadImages(numImg);
+				$(".larrow").removeClass("hide");
+				/*if(($("img").hasClass("image"+(numImg+8)))){
+				alert(numImg+8);
+		 			$(".arrow").addClass("test");
+		 		}
+				else{
+				//alert(numImg);
+		 			$(".arrow").addClass("hide");
+				}*/
+		 });
+		 $("img.larrow").click(function() { //start function when any link is clicked
+				numImg= numImg-8;	
+		 		loadImages(numImg);
+				if(numImg==0){
+		 			$(".larrow").addClass("hide");
+		 		}	
+				if($(".arrow").hasClass("hide")){
+		 			$(".arrow").removeClass("hide");
+		 		}
+					});
+		 
+			});
+
+loadImages = function(start){
+var viewControlId="blackImg";
+  	 var viewControlHtml = [];
+		 var largeId="largepic";
+  	 var largeHtml = [];
+	var eventDiv;
+	for (counter = start; counter < start+13; counter++){
+            file_number = counter + 1;
+						
+						viewControlHtml.push('<div class="blackdiv images');
+						viewControlHtml.push(file_number);
+						viewControlHtml.push('" title="images');
+						viewControlHtml.push(file_number);
+						viewControlHtml.push('">');
+						
+						viewControlHtml.push('<img alt="test" class="black hide images');
+						viewControlHtml.push(file_number);
+						viewControlHtml.push('" title="image');
+						viewControlHtml.push(file_number);
+						viewControlHtml.push('" src="images/image');
+						viewControlHtml.push(file_number);
+						viewControlHtml.push('.JPG" onerror="$(this).remove();"/>');
+						
+						viewControlHtml.push('</div>');
+						
+						largeHtml.push('<img alt="test" class="hide image');
+						largeHtml.push(file_number);
+						largeHtml.push('" src="images/image');
+						largeHtml.push(file_number);
+						largeHtml.push('.JPG" onerror="$(this).remove();" />');
+						
+						
+   }
+  jQuery('#' + viewControlId).empty();
+  jQuery('#' + viewControlId).html(viewControlHtml.join(''));
+  //jQuery('#' + largeId).empty();
+  jQuery('#' + largeId).html(largeHtml.join(''));
+	
+			//checks if there are enough images
+				if(($("img").hasClass("images"+(start)))){
+				//alert(start);
+		 			$(".arrow").addClass("test");
+		 		}
+				else{
+				//alert(numImg);
+		 			$(".arrow").addClass("hide");
+				}
+	 $("img.black").click(function() { //start function when any link is clicked
+								
+		 		//alert("testing");
+								var filterPic = $(this).attr("title");
+								$(".keep").addClass("black");
+								$(this).removeClass("black").fadeIn("fast");
+								$(this).addClass("keep");
+								//alert(filterPic);
+								$(".centerpic").removeClass("centerpic").addClass("hide");
+								$("." + filterPic).removeClass("hide").addClass("centerpic");
+					});
+	 $("div.blackdiv").mouseover(function() { //start function when any link is clicked
+								
+		 		//alert("testing");
+								var filterPic = $(this).attr("title");
+								//alert(filterPic);
+								$(".black").addClass("hide");
+								$("." + filterPic).removeClass("hide");
+								
+					});
+		$("div.blackdiv").mouseout(function() { //start function when any link is clicked
+								
+								$(".black").addClass("hide");
+		 		//alert("testing");
+								//var filterPic = $(this).attr("title");
+								//alert(filterPic);
+								//$("." + filterPic).addClass("hide").fadeIn("slow");
+					});
+}
+
+</script>
+
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+	<a href="index.html"></a><img src="images/header.png" alt="kate carmack"></a>
+	</div>
+	
+	<div id="menu">
+    	<ul class="topbar">
+        	 <li class="topbar"><a href="artist.html"><img src="images/artist.png" alt="Artist"></a></li>
+            <li class="topbar"><a href="portfolio.html"><img src="images/portfolio.png" alt="Portfolio"></a></li>
+            <li class="topbar"><a href="blackbox.html"><img src="images/contact.png" alt="Contact"></a></li>
+        </ul>
+    
+    </div>
+
+	<div id="content">
+	
+	<!--<img class="thumb" src="images/image1.jpg" title="image1">-->
+	<div id="blackImg">
+	
+	</div>
+	<div id="largepic">
+	<p>This is a test</p>
+	</div>
+	<div id="clear">
+	</div>
+    
+    </div>
+    
+    <div id="bottomframe">
+    </div>
+
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6586758-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

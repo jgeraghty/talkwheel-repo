@@ -1,0 +1,258 @@
+/* CSS Document */
+
+
+
+/*mass reset of browser defaults -------------------------------------------------------------------------------------------*/
+
+
+
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td {
+	margin:0;
+	padding:0;
+	font-family:Times New Roman, serif;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset, img {
+	border:0;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol, ul {
+	list-style:none;
+}
+caption, th {
+	text-align:left;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size:100%;
+}
+q:before, q:after {
+	content:'';
+}
+abbr, acronym {
+	border-bottom:1px dotted #CCCCCC;
+}
+/*end reset-------------------------------------------------------------------------------------------------------------------*/
+
+
+body{
+	background:url(../images/BACKGROUNDTILE.jpg);
+	margin:45px 0 0 0;
+}
+#container {
+	margin-left:auto;
+	margin-right:auto;
+	width:1000px;
+	background:#fff;
+	border:3px solid #373737;
+}
+#content{
+	min-height:250px;
+}
+#header{
+	height:53px;
+}
+#headerhome{
+	height:75px;
+}
+.logobig {
+	position:absolute;
+	z-index:10;
+	margin:100px 0 25px 225px;
+}
+.smalllogo{
+	position:absolute;
+	z-index:10;
+	margin-top:10px;
+	margin-left:400px;
+}
+#menuhome{
+	margin-top:173px;
+	border-top:4px solid #bae9c8;
+	border-bottom:4px solid #bae9c8;
+	background:#fff;
+}
+ul.menuhome{
+	margin:0;
+	padding:0 0 0 10px;
+	height:20px;
+	border-top:2px solid #7f2a14;
+	border-bottom:2px solid #7f2a14;
+}
+ul.menuhome li{
+	float:left;
+}
+ul.menuhome li.rightside{
+	margin-left:575px;
+}
+#menusub{
+	border-top:4px solid #bae9c8;
+	border-bottom:4px solid #bae9c8;
+	background:#fff;
+	margin-bottom:60px;
+}
+ul.menusub{
+	margin:0;
+	padding:0 0 0 200px;
+	height:20px;
+	border-top:2px solid #7f2a14;
+	border-bottom:2px solid #7f2a14;
+}
+ul.menusub li{
+	float:left;
+}
+ul.menusub li.rightsub{
+	margin-left:195px;
+}
+.artistInfo{
+	margin:50px 0 50px 100px;
+}
+/*black box section*/
+.black {
+	float:left;
+}
+#blackImg {
+	width:135px;
+	height:500px;
+	float:left;
+	margin:0px 0 0 75px;
+}
+#largepic{
+	margin:0px 0 100px 0;
+}
+#largepic img{
+	border:2px solid #373737;
+}
+.blackdiv {
+	background:#565656;
+	float:left;
+	margin:5px 5px 5px 5px;
+	width: 40px;
+	height: 40px;
+	overflow:hidden;
+}
+.white {
+	background:#FFFFFF;
+}
+.keep {
+	float:left;
+}
+/*form stuff*/
+#contactform{
+	background:url(../images/contactbox.png) no-repeat;
+	width:528px;
+	height:605px;
+	margin:0 0 50px 240px;
+}
+#form {
+	width:250px;
+	margin-left:auto;
+	margin-right:auto;
+}
+#myform{
+	padding-top:275px;
+}
+.formline{
+	height:30px;
+}
+
+.formbox{
+	height:115px;
+}
+label.forms{
+	float:left;
+	width:85px;
+	display:block;
+}
+input, textarea{
+	float:right;
+	margin: 1px 0 5px 0;
+	width:140px;
+}
+.form {
+	clear:both;
+	width:auto;
+	float:right;
+}
+.hide {
+	display:none;
+}
+li.galleryDropdown{
+	position:relative;
+}
+li.galleryDropdown ul{
+	position:absolute;
+	top:20px;
+	left:0;
+	display:none;
+	background:#ffffff;
+	border-bottom:2px solid #7f2a14;
+	border-left:2px solid #7f2a14;
+	border-right:2px solid #7f2a14;
+}
+li.galleryDropdown:hover ul{
+	display:block;
+}
+ul.gallery li{
+	display:block;
+	width:115px;
+	height:30px;
+	text-align:center;
+	border-bottom:2px dotted #7f2a14;
+}
+ul.gallery li:hover{
+	background:#bae9c8;
+}
+ul.gallery li a{
+	display:block;
+	height:30px;
+	padding-top:3px;
+	width:115px;
+	text-decoration:none;
+	color:#000;
+}	
+ul.gallery li.bottomLI{
+	border-bottom:0;
+}	
+.comingsoon{
+	color:#373737;
+	text-align:center;
+	margin:100px 0;
+	font-size:28px;
+}
+#confirmation{
+	padding-top:300px;
+}
+/*end form stuff */
+#bottomframe{
+	font-size:10px;
+}
+.gweb{
+	float:right;
+	padding-top:3px;
+}
+.gweb a{
+	font-size:10px;
+	padding-top:0;
+}
+.kate{
+	float:left;
+	padding-top:3px;
+}
+
+/*blog styles*/
+#bottomright{
+	text-align:left;
+	color:#ffffff;
+}
+.post-footer{
+	font-size:10px;
+	color:#ffffff;
+	text-align:right;
+	height:25px;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+		<link rel="stylesheet" media="all" type="text/css" href="css/main.css"/>
+		<link rel="Shortcut Icon" href="images/favicon.ico" type="image/x-icon"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		
+		<script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/form.js"></script>
+		<meta name="robots" content="index, follow"/>
+		<meta name="author" content="Joe Geraghty"/>
+   	 	<title>Kate Carmack Photography | Contact</title>
+		
+		<script type="text/javascript">
+			// wait for the DOM to be loaded 
+			$(document).ready(function() { 
+				// bind 'myForm' and provide a simple callback function 
+				$('#myform').ajaxForm(function() { 
+					//alert("Thank you for your email!"); 
+					$('#myform').hide(); 
+					$('#confirmation').removeClass('hide');
+				}); 
+			}); 
+		</script>
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+	<a href="index.html"><img class="smalllogo" src="images/SMALLLOGO.png" alt="Kate Carmack Photography"/></a>
+	</div>
+	
+	<div id="menusub">
+    	<ul class="menusub">
+        	 <li><a href="about.html"><img src="images/about.png" alt="About"/></a></li>
+             <li class="galleryDropdown"><a href="#"><img src="images/galleries.png" alt="Galleries"/></a>
+                <ul class="gallery">
+                    <li><a href="galleries.php?gallery=portraits">Portraits</a></li>
+                    <li><a href="galleries.php?gallery=outdoors">Outdoors</a></li>
+                    <li><a href="galleries.php?gallery=engagements">Engagements</a></li>
+                    <li><a href="galleries.php?gallery=weddings">Weddings</a></li>
+                    <li class="bottomLI"><a href="galleries.php?gallery=travel">Travel</a></li>
+                </ul>
+            </li>
+            <li class="rightsub"><a href="photoblog/"><img src="images/blog.png" alt="Blog"/></a></li>
+            <li><a href="contact.html"><img src="images/contact.png" alt="Contact"/></a></li>
+        </ul>
+    
+    </div>
+
+	<div id="content">
+	
+	<div id="contactform">
+	<div id="form">
+			<form id="myform" method="post" action="mailer.php">
+            <div class="formline"><label for="name" class="forms">Your Name:</label> <input type="text" name="name" size="19"/></div>
+            <div class="formline"><label for="email" class="forms">Your Email: </label> <input type="text" name="email" size="19"/></div>
+            <div class="formline"><label for="subject" class="forms"> Subject: </label> <input type="text" name="subject" size="19"/></div>
+            <div class="formbox"><label for="message" class="forms"> Message: </label><textarea rows="5" name="message" cols="15"></textarea></div>
+            <div class="formline"><span class="forms"> </span><input type="submit" value="Submit" name="submit" class="form button"/></div>
+            
+   		 
+			</form>
+			<div id="confirmation" class="hide">
+							<p>Thanks for contacting Kate Carmack Photography! You will receive an email confirming our receipt of your message momentarily.</p>
+
+						</div>
+	  </div>
+	</div>
+	
+	<div id="clear">
+	</div>
+    
+    </div>
+    
+    <div id="bottomframe">
+    </div>
+
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6586758-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
